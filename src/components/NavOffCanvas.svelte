@@ -6,7 +6,7 @@
   <div class="offcanvas-body p-0">
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 100%; height: 100%;">
       <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Caixa de ferramentas</h5>
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">E-ToolBox</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <hr>
