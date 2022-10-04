@@ -1,3 +1,7 @@
+<script>
+  import { location } from "svelte-spa-router"
+</script>
+
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   Link with href
 </a>
@@ -11,25 +15,25 @@
     </div>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#/" class="d-flex nav-link active" aria-current="page">
+      <li class="nav-item" data-bs-dismiss="offcanvas">
+        <a href="#/" class="d-flex nav-link {($location=="/")?" active":"link-dark"}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
           Home
         </a>
       </li>
-      <li>
-        <a href="#/whatssemcontato" class="d-flex nav-link link-dark">
+      <li data-bs-dismiss="offcanvas">
+        <a href="#/whatssemcontato" class="d-flex nav-link {($location=="/whatssemcontato")?" active":"link-dark"}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
           Whats Sem Contato
         </a>
       </li>
-      <li>
-        <a href="#/calculadoramulta" class="d-flex nav-link link-dark">
+      <li data-bs-dismiss="offcanvas">
+        <a href="#/calculadoramulta" class="d-flex nav-link {($location=="/calculadoramulta")?" active":"link-dark"}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
           Calculadora Multa
         </a>
       </li>
     </ul>
-  </div>
+    </div>
   </div>
 </div>
