@@ -6,7 +6,7 @@
   Link with href
 </a>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="max-width: 300px;">
+<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="max-width: 300px;">
   <div class="offcanvas-body p-0">
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 100%; height: 100%;">
       <div class="offcanvas-header">
@@ -18,6 +18,7 @@
       <li class="nav-item" data-bs-dismiss="offcanvas">
         <a href="#/" class="d-flex nav-link {($location=="/")?" active":"link-dark"}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          <i class="bi bi-house-door"></i>
           Home
         </a>
       </li>
