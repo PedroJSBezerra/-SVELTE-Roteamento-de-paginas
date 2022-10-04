@@ -6,7 +6,7 @@
   Link with href
 </a>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="max-width: 300px;">
   <div class="offcanvas-body p-0">
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 100%; height: 100%;">
       <div class="offcanvas-header">
