@@ -13,4 +13,12 @@
 </script>
 
 <Header/>
-<Router { routes }/>
+<main>
+  <Router { routes }/>
+</main>
+
+<style>
+  main {
+    padding-top: 55px;
+  }
+</style>
