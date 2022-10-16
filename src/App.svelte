@@ -3,7 +3,7 @@
   import WhatsSemContato from './routes/WhatsSemContato.svelte'
   import Home from './routes/Home.svelte'
   import CalculadoraMulta from './routes/CalculadoraMulta.svelte'
-  import NavOffCanvas from './components/NavOffCanvas.svelte'
+  import Header from "./components/Header/Header.svelte"
 
   const routes = {
     '/': Home,
@@ -12,5 +12,5 @@
   }
 </script>
 
-<NavOffCanvas />
+<Header/>
 <Router { routes }/>
