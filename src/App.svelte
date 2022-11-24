@@ -18,7 +18,4 @@
 </main>
 
 <style>
-  main {
-    padding-top: 55px;
-  }
 </style>
