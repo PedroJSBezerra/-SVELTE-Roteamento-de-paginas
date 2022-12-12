@@ -3,40 +3,51 @@
   let desconto
   let qtSessoes
   let rSessoes
+
+  let valorArea = (vArea, desconto) => {
+    let total = vArea - (vArea * (desconto /100))
+    return isNaN(total)? "" : total.toFixed(2)
+  }
+
+  let valorRealizado = (vArea, qtSessoes, rSessoes) => {
+    let total = (vArea/qtSessoes) * rSessoes
+    return isNaN(total)? "" : total.toFixed(2)
+  }
+
+  let valorDaMulta = (vArea, qtSessoes, rSessoes) => {
+    let total = (vArea/qtSessoes) * (qtSessoes - rSessoes) * 0.3
+    return isNaN(total)? "" : total.toFixed(2)
+  }
+
 </script>
 
-<div class="card m-3 p-2">
-  <h3 class="card-header">Calculo da Multa por Area</h3>
-  <main class="card-body">
-    <div class="inputArea">
-      <label for="vArea">Valor da Area / pacote</label>
-      <input type="number" id="vArea" bind:value={vArea}><br>
-      
-      <label for="desconto">Desconto em %</label>
-      <input type="number" id="desconto" bind:value={desconto}><br>
+<div class="inputArea">
+  <label for="vArea">Valor da Area / pacote</label>
+  <input type="number" id="vArea" bind:value={vArea}><br>
+  
+  <label for="desconto">Desconto em %</label>
+  <input type="number" id="desconto" bind:value={desconto}><br>
 
-      <label for="qtSessoes">Qt Sessões vendido</label>
-      <input type="number" id="qtSessoes" bind:value={qtSessoes}><br>
+  <label for="qtSessoes">Qt Sessões vendido</label>
+  <input type="number" id="qtSessoes" bind:value={qtSessoes}><br>
 
-      <label for="rSessoes">Sessões Realizadas</label>
-      <input type="number" id="rSessoes" bind:value={rSessoes}><br>
-    </div>
-    
-    <div class="resultArea">
-      <div class="results">
-        <p>Valor da Area:</p>
-        <p>R$ {(vArea-vArea*desconto/100).toFixed(2)}</p>
-      </div>
-      <div class="results">
-        <p>Valor Realizado em Sessões:</p>
-        <p>R$ {((vArea-vArea*desconto/100)/qtSessoes*rSessoes).toFixed(2)}</p>
-      </div>
-      <div class="results">
-        <p>Valor da Multa:</p>
-        <p>R$ {(((vArea-vArea*desconto/100) - ((vArea-vArea*desconto/100)/qtSessoes*rSessoes)) * 0.3).toFixed(2)}</p>
-      </div>
-    </div>
-  </main>
+  <label for="rSessoes">Sessões Realizadas</label>
+  <input type="number" id="rSessoes" bind:value={rSessoes}><br>
+</div>
+
+<div class="resultArea">
+  <div class="results">
+    <p>Valor da Area:</p>
+    <p>R$ {valorArea(vArea,desconto)}</p>
+  </div>
+  <div class="results">
+    <p>Valor Realizado em Sessões:</p>
+    <p>R$ {valorRealizado(vArea, qtSessoes, rSessoes)}</p>
+  </div>
+  <div class="results">
+    <p>Valor da Multa:</p>
+    <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
+  </div>
 </div>
 
 <style>
