@@ -40,24 +40,29 @@
 </div>
 
 <style>
+
   main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   main > * {
     min-width: 250px;
   }
+
   .inputArea, .inputArea{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
+
   .resultArea{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
+
   .results{
     display: flex;
     width: 100%;
@@ -67,7 +72,9 @@
     background: rgba(0,0,0, .25);
     border-radius: 4px;
   }
+
   p{
     margin: 6px 10px;
   }
+  
 </style>
