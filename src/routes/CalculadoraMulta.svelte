@@ -21,48 +21,62 @@
 
 </script>
 
-<div class="inputArea">
-  <label for="vArea">Valor da Area / pacote</label>
-  <input type="number" id="vArea" bind:value={vArea}><br>
-  
-  <label for="desconto">Desconto em %</label>
-  <input type="number" id="desconto" bind:value={desconto}><br>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="calculadora">
+        <div class="inputArea">
+          <label for="vArea">Valor da Area / pacote</label>
+          <input type="number" id="vArea" bind:value={vArea}><br>
+          
+          <label for="desconto">Desconto em %</label>
+          <input type="number" id="desconto" bind:value={desconto}><br>
 
-  <label for="qtSessoes">Qt Sessões vendido</label>
-  <input type="number" id="qtSessoes" bind:value={qtSessoes}><br>
+          <label for="qtSessoes">Qt Sessões vendido</label>
+          <input type="number" id="qtSessoes" bind:value={qtSessoes}><br>
 
-  <label for="rSessoes">Sessões Realizadas</label>
-  <input type="number" id="rSessoes" bind:value={rSessoes}><br>
-</div>
+          <label for="rSessoes">Sessões Realizadas</label>
+          <input type="number" id="rSessoes" bind:value={rSessoes}><br>
+        </div>
 
-<div class="resultArea">
-  <div class="results">
-    <p>Valor da Area:</p>
-    <p>R$ {valorArea(vArea,desconto)}</p>
+        <div class="resultArea">
+          <div class="results">
+            <p>Valor da Area:</p>
+            <p>R$ {valorArea(vArea,desconto)}</p>
+          </div>
+          <div class="results">
+            <p>Valor Realizado em Sessões:</p>
+            <p>R$ {valorRealizado(vArea, qtSessoes, rSessoes)}</p>
+          </div>
+          <div class="results">
+            <p>Valor da Multa:</p>
+            <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="results">
-    <p>Valor Realizado em Sessões:</p>
-    <p>R$ {valorRealizado(vArea, qtSessoes, rSessoes)}</p>
-  </div>
-  <div class="results">
-    <p>Valor da Multa:</p>
-    <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
-  </div>
-</div>
+</section>
 
 <style>
-
-  main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  
+  .section {
+    padding: 20px 0;
   }
 
-  main > * {
-    min-width: 250px;
+  .container {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  
+  .calculadora {
+    max-width: 400px;
+    background: rgba(0,0,0, .15);
+    padding: 20px;
+    border-radius: 8px;
   }
 
-  .inputArea, .inputArea{
+  .inputArea {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -76,16 +90,21 @@
 
   .results{
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     margin: 5px 0;
-    background: rgba(0,0,0, .25);
+    background: rgba(0,0,0, .15);
     border-radius: 4px;
   }
 
   p{
     margin: 6px 10px;
   }
+
+  @media only screen and (max-width: 425px) {
+  }
+
+  
+
   
 </style>
