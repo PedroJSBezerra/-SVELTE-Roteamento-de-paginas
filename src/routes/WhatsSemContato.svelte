@@ -44,14 +44,30 @@
 
 </script>
 
-<div class="card col-sm-6 m-3">
-  <div class="card-header" bind:this={device}></div>
-  <form class="card-body" bind:this={form} id="form">
-    <h5 class="card-title">Whatsapp Sem Contato</h5>
-    <label class="form-label" for="phone">
-      <p class="card-text">Digite ou cole o telefone 👇.</p>
-    </label>
-    <input class="form-control mb-3" bind:this={phone} placeholder="(00)0000-0000" inputmode="numeric" type="phone" id="phone">
-    <input class="btn btn-primary" type="submit" value="Abrir Conversa">
-  </form>
-</div>
+<section class="section">
+  <div class="container row">
+    <div class="card col-sm-6 m-3">
+      <div class="card-header" bind:this={device}></div>
+      <form class="card-body" bind:this={form} id="form">
+        <h5 class="card-title">Whatsapp Sem Contato</h5>
+        <label class="form-label" for="phone">
+          <p class="card-text">Digite ou cole o telefone 👇.</p>
+        </label>
+        <input class="form-control mb-3" bind:this={phone} placeholder="(00)0000-0000" inputmode="numeric" type="phone" id="phone">
+        <input class="btn btn-primary" type="submit" value="Abrir Conversa">
+      </form>
+    </div>  
+  </div>
+</section>
+
+
+<style>
+  .section {
+    padding: 20px 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+</style>
