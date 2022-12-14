@@ -127,6 +127,7 @@
   nav ul li a {
     display: block;
     padding: 6px 8px;
+    font-size: 1.2rem;
   }
 
 </style>
