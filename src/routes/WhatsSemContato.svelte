@@ -45,7 +45,7 @@
 </script>
 
 <section class="section">
-  <div class="container row">
+  <div class="container">
     <div class="card col-sm-6 m-3">
       <div class="card-header" bind:this={device}></div>
       <form class="card-body" bind:this={form} id="form">
@@ -62,12 +62,4 @@
 
 
 <style>
-  .section {
-    padding: 20px 0;
-  }
-
-  .container {
-    margin: 0 auto;
-    max-width: 320px;
-  }
 </style>

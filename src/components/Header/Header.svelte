@@ -53,15 +53,6 @@
 </header>
 
 <style>
-  .section {
-    padding: 10px 0;
-    box-shadow: 0 0 6px -4px;
-  }
-
-  .container {
-    max-width: 320px;
-    margin: 0 auto;
-  }
 
   .button {
     align-items: center;

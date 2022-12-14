@@ -60,17 +60,7 @@
 
 <style>
   
-  .section {
-    padding: 20px 0;
-  }
-
-  .container {
-    margin: 0 auto;
-    max-width: 320px;
-  }
-  
   .calculadora {
-    max-width: 400px;
     background: rgba(0,0,0, .15);
     padding: 20px;
     border-radius: 8px;
