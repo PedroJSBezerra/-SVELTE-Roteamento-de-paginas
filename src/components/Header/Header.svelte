@@ -1,149 +1,142 @@
 <script>
-  let menuOpen = false
+  let open = false
   let toggle = () => {
-    menuOpen = !menuOpen
+    open = !open
   }
 
 </script>
 
-<header class="section {menuOpen? "menu open" :"menu close" }" on:click={() => toggle()}>
-  
-  <div class="button {menuOpen? "open": ""}">
-    <span></span>
-  </div>
-  
-  <nav class="container">
+<header class="header">
+  <div class="container">
+    
+    <div class="button {open? "open": ""}" on:click={() => toggle()}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <div class="logo">
       <h3>
         <a href="#/">E-ToolBox</a>
       </h3>
     </div>
-
-    <div style="margin: 0 auto;"></div>
     
-    <hr>
-    
-    <ul class="menu">
-      <li>
-        <a href="#/">
-          <i class="bi bi-house-door pe-none me-2"></i>
-          Home
-        </a>
-      </li>
+    <nav class="nav {open? "open":""}" on:click={() => toggle()}>
 
-      <li>
-        <a href="#/whatssemcontato">
-          <i class="bi pe-none me-2 bi-whatsapp"></i>
-          Whats Sem Contato
-        </a>
-      </li>
-      
-      <li>
-        <a href="#/calculadoramulta">
-          <i class="bi pe-none me-2 bi-calculator"></i>
-          Calculadora Multa
-        </a>
-      </li>
-    </ul>
-  </nav>
+      <h3 style="margin: 0 20px;{open? "":"display: none:"}">Menu</h3>
+      <hr>
+      <ul class="menu">
+        <li>
+          <a href="#/">
+            <i class="bi bi-house-door pe-none me-2"></i>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#/whatssemcontato">
+            <i class="bi pe-none me-2 bi-whatsapp"></i>
+            Whats Sem Contato
+          </a>
+        </li>
+        
+        <li>
+          <a href="#/calculadoramulta">
+            <i class="bi pe-none me-2 bi-calculator"></i>
+            Calculadora Multa
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
 </header>
 
 <style>
+  header {
+    padding: 10px 0;
+    box-shadow: 0 0 10px #ddd;
+  }
+
+  .container {
+    max-width: 450px;
+    margin: 0 auto;
+  }
 
   .button {
-    position: fixed;
-    right: 32px;
-    top: 32px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.7;
-    display: flex;
     align-items: center;
+    background: rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
     justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    z-index: 999;
   }
 
-  .button span:hover {
-    opacity: 1;
-  }
-
-  .button span, .button span:before, .button span:after {
-    content: ' ';
-    position: absolute;
+  .button span,
+  .button span:nth-child(1),
+  .button span:nth-child(2) {
+    background: #333;
+    border-radius: 2px;
+    content: "";
+    display: block;
     height: 4px;
+    position: absolute;
+    transition: all .3s ease-in-out; 
     width: 30px;
-    background-color: #333;
+    border-radius: 2px;
   }
 
-  .button span:before {
+  .button span:nth-child(1){
     transform: translateY(-10px);
   }
 
-  .button span:after {
+  .button span:nth-child(2){
     transform: translateY(10px);
   }
 
   .button.open span {
-    display: none;
+    transform: translateX(-50px);
   }
 
-  .button.open span:before {
-    transform: rotate(-45deg);
+  .button.open span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
   }
 
-  .button.open span:after {
-    transform: rotate(45deg);
-  }
-
-  .section {
-    padding: 40px 0;
-  }
-
-  .container {
-    margin: 0 20px;
-  }
-
-  header {
-    box-shadow: 5px 10px 12px 2px rgb(0,0,0, .15);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    bottom: 0;
-    overflow: hidden;
-    transition: left ease-in .15s;
-    background: rgb(237 237 237 / 100%);
-  }
-
-  .menu.open {
-    left: 0;
-  }
-
-  .menu.close {
-    left: 100%;
-  }
-
-  nav, ul{
-    display: flex;
+  .button.open span:nth-child(2){
+    transform: translateY(0) rotate(-45deg);
   }
 
   nav {
+    background: #ddd;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    transition: left .4s;
+    padding: 60px 0;
+  }
+
+  nav.open {
+    left: 0;
+  }
+
+  nav ul {
+    max-width: 320px;
     margin: 0 auto;
-    align-items: center;
-    flex-direction: column;
+    padding: 0 10px;
   }
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  li {
-    margin: 6px;
-  }
-
-  a {
-    padding: 4px 6px;
-    background: rgb(0 0 0 / 15%);
-    border-radius: 4px;
+  nav ul li a {
+    display: block;
+    padding: 6px 8px;
   }
 
 </style>
