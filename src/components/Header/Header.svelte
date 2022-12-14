@@ -6,10 +6,9 @@
 
 </script>
 
-
 <header class="section {menuOpen? "menu open" :"menu close" }" on:click={() => toggle()}>
   
-  <div class="button">
+  <div class="button {menuOpen? "open": ""}">
     <span></span>
   </div>
   
@@ -23,7 +22,6 @@
     <div style="margin: 0 auto;"></div>
     
     <hr>
-    
     
     <ul class="menu">
       <li>
@@ -84,11 +82,15 @@
     transform: translateY(10px);
   }
 
-  .button.open:before {
+  .button.open span {
+    display: none;
+  }
+
+  .button.open span:before {
     transform: rotate(-45deg);
   }
 
-  .button.open:after {
+  .button.open span:after {
     transform: rotate(45deg);
   }
 
