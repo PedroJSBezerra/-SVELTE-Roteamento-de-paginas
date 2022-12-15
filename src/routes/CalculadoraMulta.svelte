@@ -24,7 +24,11 @@
 <section class="section">
   <div class="container">
     <div class="row">
+
       <div class="calculadora">
+        <h3>Calculo do cancelamento</h3>
+        <p>Digite os valores</p>
+        
         <div class="inputArea">
           <label for="vArea">Valor da Area / pacote</label>
           <input type="number" id="vArea" bind:value={vArea}><br>
@@ -38,7 +42,7 @@
           <label for="rSessoes">Sessões Realizadas</label>
           <input type="number" id="rSessoes" bind:value={rSessoes}><br>
         </div>
-
+        <h3>Resultado</h3>
         <div class="resultArea">
           <div class="results">
             <p>Valor da Area:</p>
@@ -87,7 +91,7 @@
     border-radius: 4px;
   }
 
-  p{
+  .results p{
     margin: 6px 10px;
   }
 

@@ -6,7 +6,7 @@
   import Header from "./components/Header/Header.svelte"
 
   const routes = {
-    '/': Home,
+    '/': CalculadoraMulta,
     '/whatssemcontato': WhatsSemContato,
     '/calculadoramulta': CalculadoraMulta
   }

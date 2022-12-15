@@ -56,8 +56,13 @@
 
   .button {
     align-items: center;
-    background: rgb(0 0 0 / 15%);
+    background: #fff;
     border-radius: 4px;
+    box-shadow: 
+      0 0 1px 1px #fff, 
+      0 0 2px 3px #f2f2f2, 
+      0px 0px 3px 0px #f3f3f3, 
+      2px 3px 8px 0px #f9f9f9;
     cursor: pointer;
     display: flex;
     height: 40px;
@@ -77,19 +82,19 @@
     border-radius: 2px;
     content: "";
     display: block;
-    height: 4px;
+    height: 3px;
     position: absolute;
     transition: all .3s ease-in-out; 
-    width: 30px;
+    width: 25px;
     border-radius: 2px;
   }
 
   .button span:nth-child(1){
-    transform: translateY(-10px);
+    transform: translateY(-9px);
   }
 
   .button span:nth-child(2){
-    transform: translateY(10px);
+    transform: translateY(9px);
   }
 
   .button.open span {
