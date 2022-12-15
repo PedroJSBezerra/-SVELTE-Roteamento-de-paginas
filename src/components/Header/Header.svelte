@@ -6,7 +6,7 @@
 
 </script>
 
-<header class="section">
+<header class="header">
   <div class="container">
     
     <div class="button {open? "open": ""}" on:click={() => toggle()}>
@@ -20,6 +20,8 @@
         <a href="#/">E-ToolBox</a>
       </h3>
     </div>
+
+    <div style="width: 40px;"></div>
     
     <nav class="nav {open? "open":""}" on:click={() => toggle()}>
 
@@ -49,30 +51,23 @@
       </ul>
     </nav>
   </div>
-  
 </header>
+
+<div style="margin-bottom: 60px;"></div>
 
 <style>
 
   .button {
     align-items: center;
-    background: #fff;
     border-radius: 4px;
-    box-shadow: 
-      0 0 1px 1px #fff, 
-      0 0 2px 3px #f2f2f2, 
-      0px 0px 3px 0px #f3f3f3, 
-      2px 3px 8px 0px #f9f9f9;
     cursor: pointer;
     display: flex;
     height: 40px;
     justify-content: center;
     overflow: hidden;
-    position: fixed;
-    right: 20px;
-    top: 20px;
     width: 40px;
     z-index: 999;
+    position: relative;
   }
 
   .button span,
@@ -98,15 +93,34 @@
   }
 
   .button.open span {
-    transform: translateX(-50px);
+    transform: translateX(50px);
   }
 
   .button.open span:nth-child(1){
-    transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(-45deg);
   }
 
   .button.open span:nth-child(2){
-    transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(45deg);
+  }
+
+  header {
+    padding: 10px 0;
+    box-shadow: 0 0 6px -4px;
+    height: 60px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    margin-bottom: 25px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   nav {
@@ -114,14 +128,14 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 100%;
+    right: 100%;
     width: 100%;
-    transition: left .4s;
+    transition: right .4s;
     padding: 60px 0;
   }
 
   nav.open {
-    left: 0;
+    right: 0;
   }
 
   nav ul {
