@@ -5,12 +5,14 @@
   import CalculadoraMulta from './routes/CalculadoraMulta.svelte'
   import Header from "./components/Header/Header.svelte"
   import QrCodeGenerator from "./routes/QrCodeGenerator.svelte"
+  import PasswordGenerator from "./routes/PasswordGenerator.svelte"
 
   const routes = {
     '/': CalculadoraMulta,
     '/whatssemcontato': WhatsSemContato,
     '/calculadoramulta': CalculadoraMulta,
     '/qrcodegenerator': QrCodeGenerator,
+    '/passwordgenerator': PasswordGenerator,
   }
 </script>
 

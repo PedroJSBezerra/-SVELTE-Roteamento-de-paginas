@@ -55,6 +55,13 @@
               Gerador de Qr Code
             </a>
           </li>
+
+          <li>
+            <a href="#/passwordgenerator">
+              <i class="bi bi-key"></i>
+              Gerador de senha
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
