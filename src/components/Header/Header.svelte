@@ -48,6 +48,13 @@
             Calculadora Multa
           </a>
         </li>
+        
+        <li>
+          <a href="#/qrcodegenerator">
+            <i class="bi bi-qr-code"></i>
+            Gerador de Qr Code
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
