@@ -24,38 +24,39 @@
     <div style="width: 40px;"></div>
     
     <nav class="nav {open? "open":""}" on:click={() => toggle()}>
+      <div class="nav container">
+        <h3 style="margin: 0 20px;{open? "":"display: none:"}">Menu</h3>
+        <hr>
+        <ul class="menu">
+          <li>
+            <a href="#/">
+              <i class="bi bi-house-door pe-none me-2"></i>
+              Home
+            </a>
+          </li>
 
-      <h3 style="margin: 0 20px;{open? "":"display: none:"}">Menu</h3>
-      <hr>
-      <ul class="menu">
-        <li>
-          <a href="#/">
-            <i class="bi bi-house-door pe-none me-2"></i>
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a href="#/whatssemcontato">
-            <i class="bi pe-none me-2 bi-whatsapp"></i>
-            Whats Sem Contato
-          </a>
-        </li>
-        
-        <li>
-          <a href="#/calculadoramulta">
-            <i class="bi pe-none me-2 bi-calculator"></i>
-            Calculadora Multa
-          </a>
-        </li>
-        
-        <li>
-          <a href="#/qrcodegenerator">
-            <i class="bi bi-qr-code"></i>
-            Gerador de Qr Code
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a href="#/whatssemcontato">
+              <i class="bi pe-none me-2 bi-whatsapp"></i>
+              Whats Sem Contato
+            </a>
+          </li>
+          
+          <li>
+            <a href="#/calculadoramulta">
+              <i class="bi pe-none me-2 bi-calculator"></i>
+              Calculadora Multa
+            </a>
+          </li>
+          
+          <li>
+            <a href="#/qrcodegenerator">
+              <i class="bi bi-qr-code"></i>
+              Gerador de Qr Code
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
@@ -139,6 +140,10 @@
     width: 100%;
     transition: right .4s;
     padding: 60px 0;
+  }
+
+  .nav.container {
+    flex-direction: column;
   }
 
   nav.open {
