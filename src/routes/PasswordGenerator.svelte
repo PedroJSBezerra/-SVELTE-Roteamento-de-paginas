@@ -41,13 +41,18 @@
       </div>
 
       <div class="output">
-        <p>Sua senha gerada é:</p>
         {#if password != ''}
+          <p>Sua senha gerada é:</p>
           <div class="result">
-            <h3>{password}</h3>
+            <h3 class="{copied?"check":""}">{password}</h3>
             <button class="copy" on:click={() => copy(password)}>
-              <i style="color:{copied?"green":""};" class="bi bi-clipboard{copied?"-check":""}"></i>
+              <i class="bi bi-clipboard{copied?"-check":""}"></i>
             </button>
+            {#if copied}
+              <p>
+                <small class="check">SENHA COPIADA</small>
+              </p>
+            {/if}
           </div>
         {/if}    
       </div>
@@ -78,10 +83,20 @@
   .output {
   }
 
+  .output p {
+    text-align: center;
+    width: 100%;
+  }
+
   .result {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .bi-clipboard-check, .check {
+    color: green;
   }
 
   button.copy {
