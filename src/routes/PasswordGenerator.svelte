@@ -50,7 +50,7 @@
             </button>
             {#if copied}
               <p>
-                <small class="check">SENHA COPIADA</small>
+                <small class="check">SENHA COPIADA!</small>
               </p>
             {/if}
           </div>
