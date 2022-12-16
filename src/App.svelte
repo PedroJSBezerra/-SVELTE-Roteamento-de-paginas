@@ -8,7 +8,7 @@
   import PasswordGenerator from "./routes/PasswordGenerator.svelte"
 
   const routes = {
-    '/': CalculadoraMulta,
+    '/': Home,
     '/whatssemcontato': WhatsSemContato,
     '/calculadoramulta': CalculadoraMulta,
     '/qrcodegenerator': QrCodeGenerator,
