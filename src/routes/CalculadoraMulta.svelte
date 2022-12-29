@@ -3,14 +3,14 @@
   let desconto
   let qtSessoes
   let rSessoes
-
+  
   let valorArea = (vArea, desconto) => {
-    let total = vArea - (vArea * (desconto /100))
+    let total = vArea - (vArea * desconto /100)
     return isNaN(total)? "" : total.toFixed(2)
   }
 
   let valorRealizado = (vArea, qtSessoes, rSessoes) => {
-    let total = (vArea/qtSessoes) * rSessoes
+    let total = (valorArea(vArea, desconto)/qtSessoes) * rSessoes
     return isNaN(total)? "" : total.toFixed(2)
   }
 

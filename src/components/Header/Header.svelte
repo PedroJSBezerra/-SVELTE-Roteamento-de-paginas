@@ -62,6 +62,13 @@
               Gerador de senha
             </a>
           </li>
+
+          <li>
+            <a href="#/fruitmarket">
+              <i class="bi bi-key"></i>
+              Frutas
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
