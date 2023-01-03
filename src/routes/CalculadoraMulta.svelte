@@ -26,10 +26,10 @@
     <div class="row">
 
       <div class="calculadora">
-        <h3>Calculo do cancelamento</h3>
-        <p>Digite os valores</p>
+        <h3 class="title">Calculo do cancelamento</h3>
         
         <div class="inputArea">
+          <p>Digite os valores</p>
           <label for="vArea">Valor da Area / pacote</label>
           <input type="number" id="vArea" bind:value={vArea}><br>
           
@@ -42,8 +42,9 @@
           <label for="rSessoes">Sessões Realizadas</label>
           <input type="number" id="rSessoes" bind:value={rSessoes}><br>
         </div>
-        <h3>Resultado</h3>
+
         <div class="resultArea">
+          <h3>Resultado</h3>
           <div class="results">
             <p>Valor da Area:</p>
             <p>R$ {valorArea(vArea,desconto)}</p>
@@ -57,6 +58,7 @@
             <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -68,6 +70,15 @@
     background: rgba(0,0,0, .15);
     padding: 20px;
     border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .title {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px 0;
   }
 
   .inputArea {
