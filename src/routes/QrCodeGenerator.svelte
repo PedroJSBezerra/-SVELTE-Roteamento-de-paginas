@@ -27,7 +27,7 @@
 </script>
 
 <section class="section">
-  <div class="container">
+  <div class="container welcome">
     <form on:submit|preventDefault action="">
       <h3>Gerador de QrCode</h3>
       <label for="imputUrl">Digite seu texto para gerar o QrCode:</label><br>

@@ -21,95 +21,72 @@
 
 </script>
 
-<section class="section">
-  <div class="container">
-    <div class="row">
+<div class="calculadora">
+  
+  <div class="inputArea">
+    <div class="box">
+      <h3 class="title">Calculo do cancelamento</h3>
+      <h3>Digite os valores</h3>
+      <label for="vArea">Valor da Area / pacote</label>
+      <input type="number" id="vArea" bind:value={vArea}>
+      
+      <label for="desconto">Desconto em %</label>
+      <input type="number" id="desconto" bind:value={desconto}>
 
-      <div class="calculadora">
-        <h3 class="title">Calculo do cancelamento</h3>
-        
-        <div class="inputArea">
-          <p>Digite os valores</p>
-          <label for="vArea">Valor da Area / pacote</label>
-          <input type="number" id="vArea" bind:value={vArea}><br>
-          
-          <label for="desconto">Desconto em %</label>
-          <input type="number" id="desconto" bind:value={desconto}><br>
+      <label for="qtSessoes">Qt Sessões vendido</label>
+      <input type="number" id="qtSessoes" bind:value={qtSessoes}>
 
-          <label for="qtSessoes">Qt Sessões vendido</label>
-          <input type="number" id="qtSessoes" bind:value={qtSessoes}><br>
+      <label for="rSessoes">Sessões Realizadas</label>
+      <input type="number" id="rSessoes" bind:value={rSessoes}>
+    </div>
+  </div>
 
-          <label for="rSessoes">Sessões Realizadas</label>
-          <input type="number" id="rSessoes" bind:value={rSessoes}><br>
-        </div>
-
-        <div class="resultArea">
-          <h3>Resultado</h3>
-          <div class="results">
-            <p>Valor da Area:</p>
-            <p>R$ {valorArea(vArea,desconto)}</p>
-          </div>
-          <div class="results">
-            <p>Valor Realizado em Sessões:</p>
-            <p>R$ {valorRealizado(vArea, qtSessoes, rSessoes)}</p>
-          </div>
-          <div class="results">
-            <p>Valor da Multa:</p>
-            <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
-          </div>
-        </div>
-
+  <div class="resultArea">
+    <div class="box">
+      <h3>Resultado</h3>
+      <div class="results">
+        <p>Valor da Area:</p>
+        <p>R$ {valorArea(vArea,desconto)}</p>
+      </div>
+      <div class="results">
+        <p>Valor Realizado em Sessões:</p>
+        <p>R$ {valorRealizado(vArea, qtSessoes, rSessoes)}</p>
+      </div>
+      <div class="results">
+        <p>Valor da Multa:</p>
+        <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
       </div>
     </div>
   </div>
-</section>
+
+</div>
 
 <style>
-  
+
   .calculadora {
-    background: rgba(0,0,0, .15);
-    padding: 20px;
-    border-radius: 8px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+    background: #4B2C8D;
   }
 
   .title {
     text-align: center;
     width: 100%;
-    margin: 0 0 20px 0;
+    padding: 20px 0;
+  }
+
+  .inputArea, .resultArea {
+    height: 100%;
   }
 
   .inputArea {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 70%;
   }
 
-  .resultArea{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  .resultArea {
+    background: #fff;
+    width: 30%;
   }
 
-  .results{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 5px 0;
-    background: rgba(0,0,0, .15);
-    border-radius: 4px;
-  }
-
-  .results p{
-    margin: 6px 10px;
-  }
-
-  @media only screen and (max-width: 425px) {
-  }
-
-  
-
-  
 </style>

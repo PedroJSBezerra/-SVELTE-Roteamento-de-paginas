@@ -45,7 +45,7 @@
 </script>
 
 <section class="section">
-  <div class="container">
+  <div class="container welcome">
     <div class="card col-sm-6 m-3">
       <div class="card-header" bind:this={device}></div>
       <form class="card-body" bind:this={form} id="form">

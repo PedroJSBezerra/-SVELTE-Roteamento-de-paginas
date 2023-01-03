@@ -45,12 +45,16 @@ a:hover {
 }
 
 .section {
-  padding: 10px 0;
 }
 
 .container {
   max-width: 320px;
   margin: 0 auto;
+}
+
+.welcome {
+  padding: 60px 0;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 424px) {

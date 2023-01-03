@@ -30,7 +30,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="row">
+    <div class="row welcome">
 
       <div class="input">
         <label for="tamanho">

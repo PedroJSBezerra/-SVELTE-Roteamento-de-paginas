@@ -20,8 +20,6 @@
         <a href="#/">E-ToolBox</a>
       </h3>
     </div>
-
-    <div style="width: 40px;"></div>
     
     <nav class="nav {open? "open":""}" on:click={() => toggle()}>
       <div class="nav container">
@@ -75,9 +73,11 @@
   </div>
 </header>
 
-<div style="margin-bottom: 60px;"></div>
-
 <style>
+
+  header {
+    margin-bottom: -40px;
+  }
 
   .button {
     align-items: center;
@@ -136,7 +136,6 @@
     right: 0;
     left: 0;
     background: #fff;
-    margin-bottom: 25px;
   }
 
   .container {
