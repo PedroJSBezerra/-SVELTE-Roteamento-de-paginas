@@ -78,10 +78,21 @@
 
   .inputArea, .resultArea {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .inputArea {
     width: 70%;
+    color: white;
+  }
+
+  .inputArea .box {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
   }
 
   .resultArea {
