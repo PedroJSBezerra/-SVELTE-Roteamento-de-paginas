@@ -64,9 +64,10 @@
 <style>
 
   .calculadora {
-    display: flex;
-    height: 100vh;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
     background: #4B2C8D;
   }
 
@@ -82,22 +83,39 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
   }
 
   .inputArea {
-    width: 70%;
+    min-width: 70%;
     color: white;
   }
 
   .inputArea .box {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    width: 300px;
   }
 
   .resultArea {
     background: #fff;
     width: 30%;
+  }
+  
+
+  @media screen and (max-width: 424px) {
+    .resultArea {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 425px) and (max-width: 767px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  @media screen and (min-width: 1024px) {
   }
 
 </style>
