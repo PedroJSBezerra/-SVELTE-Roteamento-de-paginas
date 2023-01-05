@@ -99,6 +99,7 @@
     border-radius: 4px;
     margin-bottom: 16px;
     opacity: .9;
+    font-weight: 600;
   }
 
   .inputArea .box {
