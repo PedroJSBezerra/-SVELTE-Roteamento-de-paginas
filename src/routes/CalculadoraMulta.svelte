@@ -91,6 +91,16 @@
     color: white;
   }
 
+  .inputArea input {
+    height: 40px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    opacity: .9;
+  }
+
   .inputArea .box {
     display: flex;
     flex-direction: column;

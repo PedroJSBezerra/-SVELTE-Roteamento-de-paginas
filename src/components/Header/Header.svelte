@@ -1,4 +1,6 @@
 <script>
+  import {location} from "svelte-spa-router"
+
   let open = false
   let toggle = () => {
     open = !open
@@ -6,7 +8,7 @@
 
 </script>
 
-<header class="header">
+<header class="header {($location=="/calculadoramulta")? "bg":""}">
   <div class="container">
     
     <div class="button {open? "open": ""}" on:click={() => toggle()}>
@@ -21,7 +23,7 @@
       </h3>
     </div>
     
-    <nav class="nav {open? "open":""}" on:click={() => toggle()}>
+    <nav class="nav {($location=="/calculadoramulta")? "bg":""} {open? "open":""}" on:click={() => toggle()} >
       <div class="nav container">
         <h3 style="margin: 0 20px;{open? "":"display: none:"}">Menu</h3>
         <hr>
@@ -172,6 +174,11 @@
     display: block;
     padding: 6px 8px;
     font-size: 1.2rem;
+  }
+
+  .bg {
+    background: #41257c;
+    color: white;
   }
 
 </style>
