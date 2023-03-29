@@ -62,6 +62,10 @@
 </section>
 
 <style>
+  .container {
+    padding: 60px 0;
+  }
+
   .row {
     box-shadow: 2px 1px 8px #999;
     border-radius: 4px;
@@ -69,6 +73,10 @@
   }
 
   .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .input button {
@@ -112,5 +120,6 @@
   button.copy:hover {
     border: 1px dashed blue;
     color: blue;
+    cursor: pointer;
   }
 </style>

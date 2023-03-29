@@ -63,12 +63,12 @@
             </a>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="#/fruitmarket">
               <i class="bi bi-key"></i>
               Frutas
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
