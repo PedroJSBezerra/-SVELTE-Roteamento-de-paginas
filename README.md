@@ -3,7 +3,7 @@
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-6f29an)
 [Deploy on Vercel](https://e-tool-box.vercel.app/)
 
-[X] CalculadoraMulta está com erro de lógica
+[] CalculadoraMulta está com erro de lógica
 [] Home está vazio
 
 [] Estilizar PasswordGenerator

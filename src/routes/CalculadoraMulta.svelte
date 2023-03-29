@@ -1,24 +1,12 @@
 <script>
-  let vArea
-  let desconto
-  let qtSessoes
-  let rSessoes
-  
-  let valorArea = (vArea, desconto) => {
-    let total = vArea - (vArea * desconto /100)
-    return isNaN(total)? "" : total.toFixed(2)
-  }
-
-  let valorRealizado = (vArea, qtSessoes, rSessoes) => {
-    let total = (valorArea(vArea, desconto)/qtSessoes) * rSessoes
-    return isNaN(total)? "" : total.toFixed(2)
-  }
-
-  let valorDaMulta = (vArea, qtSessoes, rSessoes) => {
-    let total = (vArea/qtSessoes) * (qtSessoes - rSessoes) * 0.3
-    return isNaN(total)? "" : total.toFixed(2)
-  }
-
+  let ValorDaArea = 1000
+  let PorcentagemDesconto = 70
+  let QuantidadeSessoesVendido = 10
+  let QuantidadeSessoesRealizadas = 7
+    
+  $: ResValorDaArea = ValorDaArea - (ValorDaArea * PorcentagemDesconto/100)
+  $: ResValorRealizadoEmSessoes = ResValorDaArea/QuantidadeSessoesVendido*QuantidadeSessoesRealizadas
+  $: ResValorDaMulta = ResValorDaArea/QuantidadeSessoesVendido*(QuantidadeSessoesVendido-QuantidadeSessoesRealizadas)*30/100
 </script>
 
 <div class="calculadora">
@@ -27,17 +15,17 @@
     <div class="box">
       <h3 class="title">Calculo do cancelamento</h3>
       <h3>Digite os valores</h3>
-      <label for="vArea">Valor da Area / pacote</label>
-      <input type="number" id="vArea" bind:value={vArea}>
+      <label for="ValorDaArea">Valor da Area / pacote</label>
+      <input type="number" id="ValorDaArea" bind:value={ValorDaArea}>
       
-      <label for="desconto">Desconto em %</label>
-      <input type="number" id="desconto" bind:value={desconto}>
+      <label for="PorcentagemDesconto">PorcentagemDesconto em %</label>
+      <input type="number" id="PorcentagemDesconto" bind:value={PorcentagemDesconto}>
 
-      <label for="qtSessoes">Qt Sessões vendido</label>
-      <input type="number" id="qtSessoes" bind:value={qtSessoes}>
+      <label for="QuantidadeSessoesVendido">Qt Sessões vendido</label>
+      <input type="number" id="QuantidadeSessoesVendido" bind:value={QuantidadeSessoesVendido}>
 
-      <label for="rSessoes">Sessões Realizadas</label>
-      <input type="number" id="rSessoes" bind:value={rSessoes}>
+      <label for="QuantidadeSessoesRealizadas">Sessões Realizadas</label>
+      <input type="number" id="QuantidadeSessoesRealizadas" bind:value={QuantidadeSessoesRealizadas}>
     </div>
   </div>
 
@@ -46,15 +34,15 @@
       <h3>Resultado</h3>
       <div class="results">
         <p>Valor da Area:</p>
-        <p>R$ {valorArea(vArea,desconto)}</p>
+        <p>{'R$ ' + ResValorDaArea.toFixed(2)}</p>
       </div>
       <div class="results">
         <p>Valor Realizado em Sessões:</p>
-        <p>R$ {valorRealizado(vArea, qtSessoes, rSessoes)}</p>
+        <p>{'R$ ' + ResValorRealizadoEmSessoes.toFixed(2)}</p>
       </div>
       <div class="results">
         <p>Valor da Multa:</p>
-        <p>R$ {valorDaMulta(vArea, qtSessoes, rSessoes)}</p>
+        <p>{'R$ ' + ResValorDaMulta.toFixed(2)}</p>
       </div>
     </div>
   </div>
