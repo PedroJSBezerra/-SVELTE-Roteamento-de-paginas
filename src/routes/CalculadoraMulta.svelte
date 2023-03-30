@@ -76,6 +76,10 @@
     margin-right: 6px;  
   }
 
+  .calculadora .inputArea .box label input {
+    max-width: 75px;
+  }
+
   .calculadora .resultArea {
     margin-top: 20px;
   }
