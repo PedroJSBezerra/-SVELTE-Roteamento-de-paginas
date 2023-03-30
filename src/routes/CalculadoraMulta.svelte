@@ -12,37 +12,46 @@
 <div class="calculadora">
   
   <div class="inputArea">
+    <h3 class="title">Valores</h3>
     <div class="box">
-      <h3 class="title">Calculo do cancelamento</h3>
-      <h3>Digite os valores</h3>
-      <label for="ValorDaArea">Valor da Area / pacote</label>
-      <input type="number" id="ValorDaArea" bind:value={ValorDaArea}>
       
-      <label for="PorcentagemDesconto">PorcentagemDesconto em %</label>
-      <input type="number" id="PorcentagemDesconto" bind:value={PorcentagemDesconto}>
+      <label for="ValorDaArea">
+        Valor da Area <br>
+        <input type="number" id="ValorDaArea" bind:value={ValorDaArea}>
+      </label>
+      
+      <label for="PorcentagemDesconto">
+        Desconto % <br>
+        <input type="number" id="PorcentagemDesconto" bind:value={PorcentagemDesconto}>
+      </label>
 
-      <label for="QuantidadeSessoesVendido">Qt Sessões vendido</label>
-      <input type="number" id="QuantidadeSessoesVendido" bind:value={QuantidadeSessoesVendido}>
+      <label for="QuantidadeSessoesVendido">
+        Sessões <br>
+        <input type="number" id="QuantidadeSessoesVendido" bind:value={QuantidadeSessoesVendido}>
+      </label>
 
-      <label for="QuantidadeSessoesRealizadas">Sessões Realizadas</label>
-      <input type="number" id="QuantidadeSessoesRealizadas" bind:value={QuantidadeSessoesRealizadas}>
+      <label for="QuantidadeSessoesRealizadas">
+        Realizado em sessões <br>
+        <input type="number" id="QuantidadeSessoesRealizadas" bind:value={QuantidadeSessoesRealizadas}>
+      </label>
+
     </div>
   </div>
 
   <div class="resultArea">
+    <h3>Resultado</h3>
     <div class="box">
-      <h3>Resultado</h3>
       <div class="results">
-        <p>Valor da Area:</p>
-        <p>{'R$ ' + ResValorDaArea.toFixed(2)}</p>
+        <div>Valor da Area:</div>
+        <div>{'R$ ' + ResValorDaArea.toFixed(2)}</div>
       </div>
       <div class="results">
-        <p>Valor Realizado em Sessões:</p>
-        <p>{'R$ ' + ResValorRealizadoEmSessoes.toFixed(2)}</p>
+        <div>R. Sessões:</div>
+        <div>{'R$ ' + ResValorRealizadoEmSessoes.toFixed(2)}</div>
       </div>
       <div class="results">
-        <p>Valor da Multa:</p>
-        <p>{'R$ ' + ResValorDaMulta.toFixed(2)}</p>
+        <div>Multa:</div>
+        <div>{'R$ ' + ResValorDaMulta.toFixed(2)}</div>
       </div>
     </div>
   </div>
@@ -50,71 +59,36 @@
 </div>
 
 <style>
-
   .calculadora {
-    align-items: center;
+    padding: 60px 16px 0;
+  }
+
+  .calculadora .inputArea {
+    margin-top: 20px;
+  }
+
+  .calculadora .inputArea .box {
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
-    background: #4B2C8D;
   }
 
-  .title {
-    text-align: center;
-    width: 100%;
-    padding: 20px 0;
+  .calculadora .inputArea .box label {
+    margin-right: 6px;  
   }
 
-  .inputArea, .resultArea {
-    height: 100%;
+  .calculadora .resultArea {
+    margin-top: 20px;
+  }
+
+  .resultArea .box {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    flex-wrap: wrap;
   }
 
-  .inputArea {
-    min-width: 70%;
-    color: white;
-  }
-
-  .inputArea input {
-    height: 40px;
-    font-size: 1.2rem;
-    border: none;
-    outline: none;
+  .resultArea .box .results {
+    background: rgba(0,0,0, .1);
+    padding: 6px;
+    margin: 6px 6px 6px 0;
     border-radius: 4px;
-    margin-bottom: 16px;
-    opacity: .9;
-    font-weight: 600;
   }
-
-  .inputArea .box {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-  }
-
-  .resultArea {
-    background: #fff;
-    width: 30%;
-  }
-  
-
-  @media screen and (max-width: 424px) {
-    .resultArea {
-      max-width: 100%;
-    }
-  }
-
-  @media screen and (min-width: 425px) and (max-width: 767px) {
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-  }
-
-  @media screen and (min-width: 1024px) {
-  }
-
 </style>
