@@ -63,6 +63,13 @@
             </a>
           </li>
 
+          <li>
+            <a href="#/imageresizer">
+              <i class="bi bi-aspect-ratio"></i>
+              Redimensionar imagem
+            </a>
+          </li>
+
           <!-- <li>
             <a href="#/fruitmarket">
               <i class="bi bi-key"></i>

@@ -7,6 +7,7 @@
   import QrCodeGenerator from "./routes/QrCodeGenerator.svelte"
   import PasswordGenerator from "./routes/PasswordGenerator.svelte"
   import FruitMarket from "./routes/FruitMarket.svelte"
+  import ImageResizer from "./routes/ImageResizer.svelte"
 
   const routes = {
     '/': Home,
@@ -15,6 +16,7 @@
     '/qrcodegenerator': QrCodeGenerator,
     '/passwordgenerator': PasswordGenerator,
     '/fruitmarket': FruitMarket,
+    '/imageresizer': ImageResizer,
   }
 </script>
 
