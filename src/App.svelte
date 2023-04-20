@@ -8,6 +8,7 @@
   import PasswordGenerator from "./routes/PasswordGenerator.svelte"
   import FruitMarket from "./routes/FruitMarket.svelte"
   import ImageResizer from "./routes/ImageResizer.svelte"
+  import FileNameExtractor from "./routes/FileNameExtractor.svelte"
 
   const routes = {
     '/': Home,
@@ -17,6 +18,7 @@
     '/passwordgenerator': PasswordGenerator,
     '/fruitmarket': FruitMarket,
     '/imageresizer': ImageResizer,
+    '/filenameextractor': FileNameExtractor,
   }
 </script>
 

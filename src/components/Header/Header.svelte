@@ -8,7 +8,7 @@
 
 </script>
 
-<header class="header {($location=="/calculadoramulta")? "bg":""}">
+<header class="header">
   <div class="container">
     
     <div class="button {open? "open": ""}" on:click={() => toggle()}>
@@ -23,7 +23,7 @@
       </h3>
     </div>
     
-    <nav class="nav {($location=="/calculadoramulta")? "bg":""} {open? "open":""}" on:click={() => toggle()} >
+    <nav class="nav {open? "open":""}" on:click={() => toggle()} >
       <div class="nav container">
         <h3 style="margin: 0 20px;{open? "":"display: none:"}">Menu</h3>
         <hr>
@@ -67,6 +67,13 @@
             <a href="#/imageresizer">
               <i class="bi bi-aspect-ratio"></i>
               Redimensionar imagem
+            </a>
+          </li>
+
+          <li>
+            <a href="#/filenameextractor">
+              <i class="bi bi-file-text"></i>
+              Extrair Nome dos Arquivos
             </a>
           </li>
 
@@ -181,11 +188,6 @@
     display: block;
     padding: 6px 8px;
     font-size: 1.2rem;
-  }
-
-  .bg {
-    background: #41257c;
-    color: white;
   }
 
 </style>

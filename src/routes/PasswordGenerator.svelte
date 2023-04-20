@@ -67,8 +67,6 @@
   }
 
   .row {
-    box-shadow: 2px 1px 8px #999;
-    border-radius: 4px;
     padding: 10px;
   }
 
