@@ -7,11 +7,19 @@
   $: ResValorDaArea = ValorDaArea - (ValorDaArea * PorcentagemDesconto/100)
   $: ResValorRealizadoEmSessoes = ResValorDaArea/QuantidadeSessoesVendido*QuantidadeSessoesRealizadas
   $: ResValorDaMulta = ResValorDaArea/QuantidadeSessoesVendido*(QuantidadeSessoesVendido-QuantidadeSessoesRealizadas)*30/100
+
+  let newWindow = () => {
+    window.open("https://e-tool-box.vercel.app/#/calculadoramulta", 'mywin','left=900,top=300,width=350,height=400,toolbar=0,resizable=0'); 
+    return false;
+  }
 </script>
 
 <div class="calculadora">
   
   <div class="inputArea">
+    <div class="newWindow">
+      <button on:click={() => newWindow()}>Abrir em Nova Janela</button>
+    </div>
     <h3 class="title">Valores</h3>
     <div class="box">
       
